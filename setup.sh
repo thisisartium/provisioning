@@ -1,6 +1,6 @@
 base_url() {
   # echos string prefixed with base url
-  echo "https://raw.githubusercontent.com/liamy/rig_setup/master/$1"
+  echo "https://raw.githubusercontent.com/fractaltechnologylabs/provisioning/master/$1"
 }
 
 installHidden() {
@@ -51,6 +51,8 @@ backupInstallHidden() {
   return 0;
 }
 
+#
+
 # bash settings
 backupInstallHidden 'bash_profile'
 
@@ -59,6 +61,7 @@ backupInstallHidden 'gitconfig'
 backupInstall 'git-completion.bash'
 
 # vim configuration
+mkdir -p ~/.vim/colors
 backupInstall 'terminal_colors.vim' '.vim/colors/'
 
 backupInstallHidden 'vimrc' ''
