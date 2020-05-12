@@ -53,10 +53,12 @@ backupInstallHidden() {
 
 # bash settings
 backupInstallHidden 'bash_profile'
+backupInstallHidden 'zshrc'
 
 # git settings
 backupInstallHidden 'gitconfig'
 backupInstall 'git-completion.bash'
+backupInstall 'git-completion.zsh'
 
 # vim configuration
 backupInstall 'terminal_colors.vim' '.vim/colors/'
