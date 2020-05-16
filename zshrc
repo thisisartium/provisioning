@@ -4,7 +4,7 @@ parse_git_branch() {
 
 
 setopt PROMPT_SUBST
-PS1="%F{045}|%F{035}Phalanx Config%F{045}| "
+PS1="%F{045}|%F{035}Fractal Config%F{045}| "
 PS1+="%F{142}\$(parse_git_branch)"$'\n'
 PS1+="%F{142}%n%F{255}@%F{035}%m:%F{045}%~%F{255}$ "
 export CLICOLOR=1
