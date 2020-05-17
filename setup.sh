@@ -51,6 +51,8 @@ backupInstallHidden() {
   return 0;
 }
 
+#
+
 # bash settings
 backupInstallHidden 'bash_profile'
 backupInstallHidden 'zshrc'
@@ -61,6 +63,7 @@ backupInstall 'git-completion.bash'
 backupInstall 'git-completion.zsh'
 
 # vim configuration
+mkdir -p ~/.vim/colors
 backupInstall 'terminal_colors.vim' '.vim/colors/'
 
 backupInstallHidden 'vimrc' ''
