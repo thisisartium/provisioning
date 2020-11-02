@@ -11,7 +11,6 @@ echo '###              INSTALLING UTILITIES                ###'
 echo '########################################################'
 brew install ack
 brew install tree
-brew install caskroom/cask/brew-cask
 brew cask install macvim
 
 # ruby and rails installation
@@ -43,7 +42,6 @@ brew install node
 echo '########################################################'
 echo '###            INSTALLING POSTGRESQL                 ###'
 echo '########################################################'
-brew install homebrew/versions/postgresql93
+brew install postgresql@9.3
 echo 'SETUP POSTGRESQL TO START AT LOGIN'
-ln -sfv /usr/local/opt/postgresql93/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql93.plist
+brew services start postgresql
